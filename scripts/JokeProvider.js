@@ -13,3 +13,15 @@ export const getJoke = () => {
     .then((response) => response.json())
     .then((data) => (joke = data));
 };
+
+export const getProgrammingJoke = () => {
+  return fetch("https://official-joke-api.appspot.com/jokes/programming/random")
+    .then((response) => response.json())
+    .then((data) => (joke = data[0]));
+};
+
+export const getKnockJoke = () => {
+  return fetch("https://official-joke-api.appspot.com/jokes/knock-knock/random")
+    .then((response) => response.json())
+    .then((data) => (joke = data[0]));
+};
